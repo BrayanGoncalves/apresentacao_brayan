@@ -1,0 +1,5 @@
+const configdatabase = {
+    config: './config/dbConfig.js'
+}
+
+module.exports = configdatabase;
