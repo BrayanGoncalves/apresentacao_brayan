@@ -1,5 +1,6 @@
 const configdatabase = {
-    config: './config/dbConfig.js'
+    config: './config/database/dbConfig.js', /* Essa parametrização diz qual as configurações/credenciais o Sequelize irá utilizar quando utilizar o sequelize-cli */
+
 }
 
 module.exports = configdatabase;

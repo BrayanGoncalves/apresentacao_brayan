@@ -10,7 +10,7 @@ app.use(restify.plugins.bodyParser({
 }));
 
 consign()
-    .include('config/dbConnection.js')
+    .include('config/database/dbConnection.js')
     .then('app/models')
     .then('app/services')
 	.then('app/routes')
