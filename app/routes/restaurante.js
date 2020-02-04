@@ -1,14 +1,15 @@
-// const router   = require('../../config/server.js').app;
+const application = require('../../config/server.js').app;
+const restauranteService = require('../services/restaurante.js');
 
-// router.get('/restaurante', function(req, res){
-//     res.send("Rota de restaurante OK");
-// });
+application.post('/restaurante', (req, res, next) => {
+    let dadosReq = req.body;
 
-// module.exports = router;
+    restauranteService.salvar(dadosReq).then(data => {
+        res.send(data);
+    }).catch(err => {
+        res.send(err);
+    })
+    next();
+});
 
-module.exports = function(application){
-	
-	application.get('/restaurante', function(req, res){
-        res.send("Rota de restaurante OK");
-	});
-}
+module.exports = application;
