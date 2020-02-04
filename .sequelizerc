@@ -1,6 +1,6 @@
 const configdatabase = {
     config: './config/database/dbConfig.js', /* Essa parametrização diz qual as configurações/credenciais o Sequelize irá utilizar quando utilizar o sequelize-cli */
-
+    'migrations-path': './config/database/migrations' /* Essa parametrização diz qual o diretório onde ficarão as MIGRATIONS */
 }
 
 module.exports = configdatabase;
