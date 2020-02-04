@@ -1,4 +1,6 @@
-const restaurante  = require('./restaurante.js');
-const router = [restaurante];
+const restaurante   = require('./restaurante.js');
+const menu          = require('./menu.js');
+
+const router = [restaurante, menu];
 
 module.exports = router;
